@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<body >
+   
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body bg-info" >
+        <div class="container-fluid bg-primary "style="height:60px;">
+        <div class="img">
+          <a class="navbar-brand " href=""></a><img src="\images\download.png">
+        </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse container-fluid" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'index'%}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Cars</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Bikes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Scooter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Commercial vehicles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{%url 'signin'%}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="{%url 'auto-add'%}">SALE</a>
+              </li>
+            </ul>
+              
+              
+            </ul>
+            
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Use Current Location" aria-label="Search">
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-lg" type="button">
+                  Search
+                </button>
+                <!-- <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button> -->
+                <ul class="dropdown-menu">
+                  
+                </ul>
+              </div>
+            </form>
+            <ul class= "me-auto mb-2 mb-lg-0" style="list-style-type: none; ">
+              <li class="nav-item">
+                <a class="nav-link font-awesome" href="{%url 'signin'%}">Signout</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+      <style>
+        .navbar-brand img
+        {
+          width: 110px;
+          
+        }
+        /* .img
+        {
+          width: 300px ;
+          
+        } */
+        
+      </style>
+      {%block body_block %}
+      {%endblock%}
+</body>
+</html>

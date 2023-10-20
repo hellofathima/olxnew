@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<body style="height: 100vh;">
+    
+<div class="container mt-5">
+
+    <div class="row ">
+<div class="col-4"></div>
+      <div class="col-4">
+          <div class="card " style="width: 18rem;object-fit:contain;">
+              <div class="card-block card-deck">
+                <img src="{{autos.image.url}}" class="card-img-top rounded mx-auto d-block" alt="..." width="200px" height="300px" style="object-fit:fill;" >
+                <div class="card-body">
+                  <h5 class="card-title">{{autos.type}}</h5>
+                </div>
+              </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Brand:{{autos.brand}}</li>
+                  <li class="list-group-item">Price:{{autos.price}}</li>
+                  <li class="list-group-item">Year:{{autos.year}}</li>
+
+                  <li class="list-group-item">Kmdriven:{{autos.kmdriven}}</li>
+
+                  <li class="list-group-item">Description:{{autos.description}}</li>
+                  <li class="list-group-item">Phone:{{autos.phn}}</li>
+
+
+
+                 
+                </ul>
+                
+                <div class="card-body">
+                    
+                    <a href="{%url 'change-autos' autos.id%}" class="ms-1 bg-body-tertiary">Edit</i></a>
+                    <a href="{%url 'remove-autos' autos.id%}" class="ms-1 bg-body-tertiary">Delete</i></a>
+                    
+                </div>
+              
+                </div>
+          </div>
+        
+        <div class="col-4"></div>
+        </div>
+
+
+
+    </div>
+    
+    
+    {%endblock%}
+  
